@@ -1,0 +1,43 @@
+button.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  margin-bottom: 10px; /* Adds space between buttons */
+}
+
+button.accordion:focus {
+  border: 2px solid black; /* Adds the black border to show focus */
+  background-color: #f9f9f9; /* Optional: Slightly change the background for focus */
+}
+
+button.accordion:after {
+  font-family: FontAwesome;
+  content: "\f150";
+  font-size: 18px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: "\f151";
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
